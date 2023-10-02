@@ -3,8 +3,6 @@
 }
 
 .item {
-    width: 10px;
-    height: 200px;
     padding: 10px;
     margin: 10px;
     background-color: #3498db;
@@ -19,15 +17,4 @@
     margin-top: 20px;
     text-align: center;
     line-height: 100px;
-}
-
-.vertical-text {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    transform-origin: center;
-    white-space: nowrap;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
