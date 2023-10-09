@@ -26,3 +26,6 @@ later)
 your course's questions
 * Immediately update this `README.md` and `infoCourse.json` to
 reflect the info for your course
+
+# Note:
+pl-drag-drop is half-implemented. If you run a html doc with <pl-drag-drop> tag in PL, it will show a basic dataframe
