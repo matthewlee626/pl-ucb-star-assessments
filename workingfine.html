@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Frame Manipulation</title>
+    <!-- Include jQuery and jQuery UI scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Include the custom styles -->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table id="data-frame">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+                <th>Column 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1</td>
+                <td>Row 1</td>
+                <td>Row 1</td>
+                <td>Row 1</td>
+            </tr>
+            <tr>
+                <td>Row 2</td>
+                <td>Row 2</td>
+                <td>Row 2</td>
+                <td>Row 2</td>
+            </tr>
+            <tr>
+                <td>Row 3</td>
+                <td>Row 3</td>
+                <td>Row 3</td>
+                <td>Row 3</td>
+            </tr>
+            <tr>
+                <td>Row 4</td>
+                <td>Row 4</td>
+                <td>Row 4</td>
+                <td>Row 4</td>
+            </tr>
+            <tr>
+                <td>Row 5</td>
+                <td>Row 5</td>
+                <td>Row 5</td>
+                <td>Row 5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Include the JavaScript code for drag-and-drop functionality -->
+    <script>
+        $(document).ready(function() {
+            // Make the table rows and columns draggable
+            $("#data-frame tbody tr").draggable({
+                helper: "clone",
+                opacity: 0.5,
+                zIndex: 1000
+            });
+
+            $("#data-frame th").draggable({
+                helper: "clone",
+                opacity: 0.5,
+                zIndex: 1000
+            });
+
+            // Make the table rows and columns droppable
+            $("#data-frame tbody tr, #data-frame th").droppable({
+                accept: "#data-frame tbody tr, #data-frame th",
+                drop: function(event, ui) {
+                    var draggable = ui.draggable;
+                    var droppable = $(this);
+
+                    // Swap the content of the dragged and dropped cells
+                    var temp = droppable.html();
+                    droppable.html(draggable.html());
+                    draggable.html(temp);
+
+                    const thElements = document.querySelectorAll('th');
+                    const tdElements = document.querySelectorAll('td');
+
+                }
+            });
+
+            
+        });
+
+    </script>
+</body>
+</html>

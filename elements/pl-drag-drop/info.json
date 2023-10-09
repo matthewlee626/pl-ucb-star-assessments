@@ -1,0 +1,12 @@
+{
+  "controller": "pl-drag-drop.py",
+  "dependencies": {
+    "elementScripts": [
+        "jquery-ui.js",
+        "jquery-3.6.4.min.js"
+      ],
+    "elementStyles": [
+      "pl-drag-drop.css"
+    ]
+  }
+}

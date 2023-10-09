@@ -14,7 +14,7 @@
     "zones": [{
         "title": "Practice",
         "questions": [
-            {"id": "DnDtest", "points": 10, "triesPerVariant":99999, "maxPoints":5000}
+            {"id": "DnDexample", "points": 10, "triesPerVariant":99999, "maxPoints":5000}
         ]
     }]
 }
