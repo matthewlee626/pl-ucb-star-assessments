@@ -2,6 +2,7 @@
   "controller": "pl-drag-drop.py",
   "dependencies": {
     "elementScripts": [
+        "pl-drag-drop.js",
         "jquery-ui.js",
         "jquery-3.6.4.min.js"
       ],
