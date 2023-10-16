@@ -1,19 +1,19 @@
 $(function() {
-    $("#data-frame tbody tr").draggable({
+    $(".dataframe tbody tr").draggable({
         helper: "clone",
         opacity: 0.5,
         zIndex: 1000
     });
 
-    $("#data-frame th").draggable({
+    $(".dataframe th").draggable({
         helper: "clone",
         opacity: 0.5,
         zIndex: 1000
     });
 
     // Make the table rows and columns droppable
-    $("#data-frame tbody tr, #data-frame th").droppable({
-        accept: "#data-frame tbody tr, #data-frame th",
+    $(".dataframe tbody tr, .dataframe th").droppable({
+        accept: ".dataframe tbody tr, .dataframe th",
         drop: function(event, ui) {
             var draggable = ui.draggable;
             var droppable = $(this);

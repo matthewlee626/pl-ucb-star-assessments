@@ -1,6 +1,8 @@
-<pl-question-panel>
+<pl-drag-drop>
+</pl-drag-drop>
 
-    <p> This question demos multiple ways of generating HTML tables from data in <code class="user-output">server.py</code>. </p>
+<pl-question-panel>
+    <p> Consider the following dataframe:</p>
 
     <div class="card my-2">
         <div class="card-header">
@@ -10,6 +12,13 @@
             {{{params.mytable}}}
         </div>
     </div>
+    
+    <p> What will be the value of the dataframe after running the following code:</p>
+    <pl-code language="python">
+        cols = df.columns.to_list()
+        new_cols = cols[1:] + [cols[0]]
+        df[new_cols]
+    </pl-code>
 
 
 </pl-question-panel>
